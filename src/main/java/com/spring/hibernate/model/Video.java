@@ -1,5 +1,5 @@
 package com.spring.hibernate.model;
 
-public class Employee {
+public class Video {
 
 }
