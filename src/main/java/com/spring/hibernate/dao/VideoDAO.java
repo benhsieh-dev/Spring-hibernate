@@ -8,6 +8,10 @@ public interface VideoDAO {
 	
 	List<Video> get();
 	
+	Video get(int id);
 	
+	void save(Video video);
+	
+	void delete(int id); 
 
 }
