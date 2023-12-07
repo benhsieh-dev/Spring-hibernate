@@ -34,7 +34,8 @@ public class VideoDAOImpl implements VideoDAO{
 
 	@Override
 	public void save(Video video) {
-		// TODO Auto-generated method stub
+		Session currentSession = entityManager.unwrap(Session.class);
+		currentSession.save(video); 
 		
 	}
 
