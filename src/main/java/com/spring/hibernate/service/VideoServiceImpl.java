@@ -31,7 +31,7 @@ public class VideoServiceImpl implements VideoService {
 	@Transactional
 	@Override
 	public void save(Video video) {
-		// TODO Auto-generated method stub
+		videoDAO.save(video);
 		
 	}
 
