@@ -28,8 +28,9 @@ public class VideoDAOImpl implements VideoDAO{
 
 	@Override
 	public Video get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Session currentSession = entityManager.unwrap(Session.class);
+		Video videoObj = currentSession.get(Video.class, id);
+		return videoObj;
 	}
 
 	@Override
