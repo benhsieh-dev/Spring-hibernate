@@ -24,8 +24,7 @@ public class VideoServiceImpl implements VideoService {
 	@Transactional
 	@Override
 	public Video get(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return videoDAO.get(id);
 	}
 
 	@Transactional
