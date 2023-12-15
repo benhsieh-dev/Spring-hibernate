@@ -37,8 +37,7 @@ public class VideoServiceImpl implements VideoService {
 	@Transactional
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+		videoDAO.delete(id);	
 	}
 
 }

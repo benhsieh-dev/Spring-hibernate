@@ -42,8 +42,9 @@ public class VideoDAOImpl implements VideoDAO{
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+		Session currentSession = entityManager.unwrap(Session.class);
+		Video videoObj = currentSession.get(Video.class, id);
+		currentSession.delete(videoObj);		
 	}
 
 }
