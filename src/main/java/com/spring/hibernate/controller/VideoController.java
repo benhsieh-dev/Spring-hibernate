@@ -34,6 +34,10 @@ public class VideoController {
 	
 	@GetMapping("/video/{id}")
 	public Video get(@PathVariable int id) {
+		Video videoObj = videoService.get(id);
+		if (videoObj == null) {
+			throw new RuntimeException("Video with id "+id+" is not found");
+		}
 		return videoService.get(id);
 	}
 	
