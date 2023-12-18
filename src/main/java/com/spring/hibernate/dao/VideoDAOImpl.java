@@ -36,7 +36,7 @@ public class VideoDAOImpl implements VideoDAO{
 	@Override
 	public void save(Video video) {
 		Session currentSession = entityManager.unwrap(Session.class);
-		currentSession.save(video); 
+		currentSession.saveOrUpdate(video); 
 		
 	}
 
